@@ -1,0 +1,7 @@
+A("link1", "", "", "index.html", document.getElementById("nav"))
+Button("", "tab", "Pittab's site", "", document.getElementById("link1"))
+A("link2", "", "", "cobblestone.html", document.getElementById("nav"))
+Button("", "tab", "Cobblestone", "", document.getElementById("link2"))
+A("link3", "", "", "lead.html", document.getElementById("nav"))
+Button("", "tab", "Lead-md", "", document.getElementById("link3"))
+Meta('description', 'A project by pittab')
