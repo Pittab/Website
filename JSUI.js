@@ -1,49 +1,25 @@
 // JSUI 2.0, formerly an EyeScary Development project
 
-function Button(id, group, text, onclick, target){
-    var button = document.createElement('button');
-    button.id = id;
-    button.className = group;
-    button.innerHTML = text;
-    button.onclick = onclick;
-    target.appendChild(button);
+function component(type, id, cls, inHTML, target, opt1="null", opt2="null", opt3="null"){
+  webcomponent=document.createElement(type)
+  webcomponent.innerHTML = inHTML
+  webcomponent.class = cls
+  webcomponent.id = id 
+  if(type == "a"){
+    if(opt1.startsWith("https://") || opt1.startsWith("http://") || opt1.endsWith(".html") || opt1.endsWith(".js") || opt1.endsWith(".css"))
+    {
+      webcomponent.href=opt1
+    } else {
+      webcomponent.onclick=opt1
+    }
+  } else if (type == "link"){
+    webcomponent.href=opt1
+    webcomponent.rel=opt2
+  } else if (type == "meta"){
+    webcomponent.setAttribute('name', opt1)
+    webcomponent.setAttrivute('content', opt2)
+  } else if (type == "button"){
+    webcomponent.onclick=opt1
   }
-  
-  function Meta(name, content) {
-      const metaTag = document.createElement('meta');
-      metaTag.setAttribute('name', name);
-      metaTag.setAttribute('content', content);
-      document.head.appendChild(metaTag);
-  }
-  
-  function Div(id, group, target){
-    var div = document.createElement('div');
-    div.id = id;
-    div.className = group;
-    target.appendChild(div);
-  }
-  
-  function P(id, group, text, target){
-    var p = document.createElement('p');
-    p.id = id;
-    p.className = group;
-    p.innerHTML=text
-    target.appendChild(p);
-  }
-  
-  function A(id, group, text, link, target){
-    var a = document.createElement('a');
-    a.id = id;
-    a.className = group;
-    a.innerHTML=text
-    a.href=link
-    target.appendChild(a);
-  }
-  
-  function H(type, id, group, text, target){
-    var h = document.createElement('h'+type);
-    h.id = id;
-    h.className = group;
-    h.innerHTML=text
-    target.appendChild(h);
-  }
+  target.appendChild(webcomponent)
+}

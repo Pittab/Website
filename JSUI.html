@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://eyescary.uk/css/main.css">
+    <title>JSUI - Pittab's site</title>
+</head>
+<body>
+    <div class="topbar" id="nav"></div>
+    <script src="JSUI.js"></script>
+    <script src="layout.js"></script>
+    <script>
+      component("div", "", "thesite", `<h2>JSUI</h2><p>JSUI is a JavaScript UI framework, originally made under EyeScary Development, but our site moved to astro, and now I maintain it. Since the original version, I have rewritten it to be simpler and have a wide range of uses, in fact, this entire page is made in JSUI.</p><h3>Ok, how to use?</h3><p>Well, here's a lazy ass AI generated tutorial<!DOCTYPE html><h1>JSUI 2.0 Component Creation Guide</h1><p>Welcome to the JSUI 2.0 framework! This guide will help you create UI components using the <code>component</code> function.</p><h2>Creating a Component</h2><p>The <code>component</code> function generates an HTML element and appends it to a target element. Here’s the function signature:</p><pre><code>component(type, id, cls, inHTML, target, opt1="null", opt2="null", opt3="null")</code></pre><h2>Parameters:</h2><ul><li><strong>type:</strong> The HTML tag (e.g., <code>div</code>, <code>button</code>, <code>a</code>, <code>link</code>, <code>meta</code>).</li><li><strong>id:</strong> The element's ID.</li><li><strong>cls:</strong> The element's class.</li><li><strong>inHTML:</strong> Inner HTML content.</li><li><strong>target:</strong> The parent element to append the component.</li><li><strong>opt1, opt2, opt3:</strong> Optional attributes, depending on the element type.</li></ul><h2>Examples:</h2><h3>Basic <code>div</code> Component:</h3><pre><code>component("div", "myDiv", "myClass", "Hello, JSUI!", document.body)</code></pre><h3>Button with Click Event:</h3><pre><code>component("button", "myButton", "btnClass", "Click me!", document.body, () => alert("Button clicked!"))</code></pre><h3>Link Component:</h3><pre><code>component("a", "myLink", "linkClass", "Visit Site", document.body, "https://example.com")</code></pre><h3>Meta Tag:</h3><pre><code>component("meta", "", "", "", document.head, "description", "This is a meta description")</code></pre><h2>Notes:</h2><ul><li>The function supports common attributes for specific tags (<code>href</code>, <code>onclick</code>, <code>rel</code>, <code>content</code>).</li><li>Double-check for typos (e.g., <code>setAttrivute</code> should be <code>setAttribute</code>).</li></ul><h2>Next Steps:</h2><p>Experiment with creating complex components and combining them for dynamic UI experiences!</p><p>Happy coding with JSUI 2.0! 🚀</p> <h2>Ok how I get</h2><p>Just click <a href="JSUI.js">here</a></p>`, document.body)
+    </script>
+</body>
